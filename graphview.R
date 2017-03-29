@@ -1,0 +1,5 @@
+library(png)
+ima <- readPNG("./map.png")
+plot(1:2, type='n', main="Plotting Over an Image", xlab="x", ylab="y")
+lim <- par()
+rasterImage(ima, lim$usr[1], lim$usr[3], lim$usr[2], lim$usr[4])
